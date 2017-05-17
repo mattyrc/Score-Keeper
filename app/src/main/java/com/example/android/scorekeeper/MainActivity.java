@@ -21,13 +21,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Add goal for Home team
-    public void addGoalHomeTeam (View view) {
+    public void addGoalHomeTeam(View view) {
         scoreHomeTeam = scoreHomeTeam + 1;
         displayForHomeTeam(scoreHomeTeam);
     }
 
     // Take away goal for Home team
-    public void subtractGoalHomeTeam (View view) {
+    public void subtractGoalHomeTeam(View view) {
         scoreHomeTeam = scoreHomeTeam - 1;
         // Keep goals from going negative
         if (scoreHomeTeam < 0) {
@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Add goal for Away team
-    public void addGoalAwayTeam (View view) {
+    public void addGoalAwayTeam(View view) {
         scoreAwayTeam = scoreAwayTeam + 1;
         displayForAwayTeam(scoreAwayTeam);
     }
 
     // Take away goal for Away team
-    public void subtractGoalAwayTeam (View view) {
+    public void subtractGoalAwayTeam(View view) {
         scoreAwayTeam = scoreAwayTeam - 1;
         // Keep goals from going negative
         if (scoreAwayTeam < 0) {
@@ -52,27 +52,37 @@ public class MainActivity extends AppCompatActivity {
         displayForAwayTeam(scoreAwayTeam);
     }
 
-    // Set first period
-    public void selectFirstPeriod (View view) {
+    // Set first period button
+    public void selectFirstPeriod(View view) {
         currentPeriod = 1;
         displayCurrentPeriod(currentPeriod);
     }
 
-    // Set second period
-    public void selectSecondPeriod (View view) {
+    // Set second period button
+    public void selectSecondPeriod(View view) {
         currentPeriod = 2;
         displayCurrentPeriod(currentPeriod);
     }
 
-    // Set third period
-    public void selectThirdPeriod (View view) {
+    // Set third period button
+    public void selectThirdPeriod(View view) {
         currentPeriod = 3;
         displayCurrentPeriod(currentPeriod);
     }
 
-    // TODO: Get displayCurrentPeriod() to display OTPeriod string
-    public void selectOTPeriod (View view) {
+    // Set OT period button
+    public void selectOTPeriod(View view) {
         displayOTPeriod(otPeriod);
+    }
+
+    // Reset game button
+    public void resetGame(View view) {
+        scoreHomeTeam = 0;
+        scoreAwayTeam = 0;
+        currentPeriod = 1;
+        displayForHomeTeam(scoreHomeTeam);
+        displayForAwayTeam(scoreAwayTeam);
+        displayCurrentPeriod(currentPeriod);
     }
 
     // Display score for Home team
