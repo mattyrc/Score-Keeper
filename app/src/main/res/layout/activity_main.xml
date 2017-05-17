@@ -62,12 +62,13 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="selectFirstPeriod"
                     android:text="1" />
 
                 <Button
-                    android:id="@+id/button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="selectSecondPeriod"
                     android:text="2" />
 
             </LinearLayout>
@@ -105,7 +106,6 @@
                     android:text="+" />
 
                 <Button
-                    android:id="@+id/button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="subtractGoalAwayTeam"
@@ -114,10 +114,11 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/current_period"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="0"/>
+                android:text="1"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -127,12 +128,13 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="selectThirdPeriod"
                     android:text="3" />
 
                 <Button
-                    android:id="@+id/button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="selectOTPeriod"
                     android:text="OT" />
 
             </LinearLayout>
