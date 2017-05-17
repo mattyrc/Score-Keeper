@@ -13,7 +13,7 @@
     <string name="firstPeriod">1st</string>
     <string name="secondPeriod">2nd</string>
     <string name="thirdPeriod">3rd</string>
-    <string name="otPeriod">OT</string>
+    <string name="ot_string">OT</string>
     <!-- Add / Subtract Goal -->
     <string name="addGoal">+</string>
     <string name="subtractGoal">-</string>

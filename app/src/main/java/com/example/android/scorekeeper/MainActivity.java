@@ -11,8 +11,9 @@ public class MainActivity extends AppCompatActivity {
     int scoreHomeTeam = 0;
     int scoreAwayTeam = 0;
     int currentPeriod = 1;
-    String otPeriod = "OT";
-
+    private static final String otPeriod = "OT";
+    // Crash when using line below to pull from strings.xml
+    // String otPeriod = getString(R.string.ot_string);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
