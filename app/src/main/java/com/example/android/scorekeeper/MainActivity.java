@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
     // Add goal for Home team
     public void addGoalHomeTeam(View view) {
         scoreHomeTeam = scoreHomeTeam + 1;
+        // Keep goals from reaching triple digits
+        if (scoreHomeTeam >= 100) {
+            scoreHomeTeam = 99;
+        }
         displayForHomeTeam(scoreHomeTeam);
     }
 
@@ -39,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
     // Add goal for Away team
     public void addGoalAwayTeam(View view) {
         scoreAwayTeam = scoreAwayTeam + 1;
+        // Keep goals from reaching triple digits
+        if (scoreAwayTeam >= 100) {
+            scoreAwayTeam = 99;
+        }
         displayForAwayTeam(scoreAwayTeam);
     }
 
