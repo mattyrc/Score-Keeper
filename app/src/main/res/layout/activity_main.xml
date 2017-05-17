@@ -5,9 +5,23 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.scorekeeper.MainActivity">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg" />
+    </FrameLayout>
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:background="#ffffff"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -17,17 +31,18 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/textView"
+                style="@style/teamHomeStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="Home" />
+                android:text="@string/homeTeam" />
 
             <TextView
                 android:id="@+id/home_team_score"
+                style="@style/scoreHomeStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="0" />
+                android:text="@string/score" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -35,24 +50,22 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/goalHomeButtonStyle"
                     android:onClick="addGoalHomeTeam"
-                    android:text="+" />
+                    android:text="@string/addGoal" />
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/goalHomeButtonStyle"
                     android:onClick="subtractGoalHomeTeam"
-                    android:text="-" />
+                    android:text="@string/subtractGoal" />
 
             </LinearLayout>
 
             <TextView
+                style="@style/periodHeaderStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="Period" />
+                android:text="@string/period" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -60,16 +73,18 @@
                 android:orientation="horizontal">
 
                 <Button
+                    style="@style/periodButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="selectFirstPeriod"
-                    android:text="1" />
+                    android:text="@string/firstPeriod" />
 
                 <Button
+                    style="@style/periodButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="selectSecondPeriod"
-                    android:text="2" />
+                    android:text="@string/secondPeriod" />
 
             </LinearLayout>
 
@@ -82,17 +97,17 @@
             android:orientation="vertical">
 
             <TextView
+                style="@style/teamAwayStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="Away" />
+                android:text="@string/awayTeam" />
 
             <TextView
                 android:id="@+id/away_team_score"
+                style="@style/scoreAwayStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="0" />
+                android:text="@string/score" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -100,25 +115,23 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/goalAwayButtonStyle"
                     android:onClick="addGoalAwayTeam"
-                    android:text="+" />
+                    android:text="@string/addGoal" />
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/goalAwayButtonStyle"
                     android:onClick="subtractGoalAwayTeam"
-                    android:text="-" />
+                    android:text="@string/subtractGoal" />
 
             </LinearLayout>
 
             <TextView
                 android:id="@+id/current_period"
+                style="@style/currentPeriodStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="1" />
+                android:text="@string/currentPeriod" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -126,16 +139,19 @@
                 android:orientation="horizontal">
 
                 <Button
+                    style="@style/periodButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="selectThirdPeriod"
-                    android:text="3" />
+                    android:text="@string/thirdPeriod" />
 
                 <Button
+                    android:id="@+id/otButton"
+                    style="@style/periodButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="selectOTPeriod"
-                    android:text="OT" />
+                    android:text="@string/otPeriod" />
 
             </LinearLayout>
 
@@ -144,11 +160,11 @@
     </LinearLayout>
 
     <Button
+        style="@style/resetButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:onClick="resetGame"
-        android:text="Reset" />
+        android:text="@string/resetButton" />
 
 </RelativeLayout>

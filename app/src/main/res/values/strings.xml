@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Score Keeper</string>
+    <!-- Team Names -->
+    <string name="homeTeam">Home</string>
+    <string name="awayTeam">Away</string>
+    <!-- Score -->
+    <string name="score">0</string>
+    <!-- Period -->
+    <string name="period">Period</string>
+    <!-- Current Period -->
+    <string name="currentPeriod">1</string>
+    <!-- Period Buttons -->
+    <string name="firstPeriod">1st</string>
+    <string name="secondPeriod">2nd</string>
+    <string name="thirdPeriod">3rd</string>
+    <string name="otPeriod">OT</string>
+    <!-- Add / Subtract Goal -->
+    <string name="addGoal">+</string>
+    <string name="subtractGoal">-</string>
+    <!-- Reset Button -->
+    <string name="resetButton">Reset Game</string>
 </resources>
